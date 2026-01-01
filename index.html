@@ -856,26 +856,38 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Show success message
-            const successMsg = document.getElementById('successMessage');
-            successMsg.style.display = 'block';
+            // REPLACE THESE WITH YOUR ACTUAL GOOGLE FORM VALUES
+            const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
             
-            // Reset form
-            this.reset();
+            // REPLACE THESE WITH YOUR ACTUAL FIELD NAMES FROM GOOGLE FORM
+            const formData = new FormData();
+            formData.append('entry.YOUR_NAME_FIELD', document.getElementById('name').value);
+            formData.append('entry.YOUR_EMAIL_FIELD', document.getElementById('email').value);
+            formData.append('entry.YOUR_MOBILE_FIELD', document.getElementById('mobile').value);
+            formData.append('entry.YOUR_COMPANY_FIELD', document.getElementById('company').value);
+            formData.append('entry.YOUR_SERVICE_FIELD', document.getElementById('service').value);
+            formData.append('entry.YOUR_MESSAGE_FIELD', document.getElementById('message').value);
             
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMsg.style.display = 'none';
-            }, 5000);
-            
-            // Here you would typically send the form data to your backend
-            console.log('Form submitted with data:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                mobile: document.getElementById('mobile').value,
-                company: document.getElementById('company').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
+            // Submit to Google Form
+            fetch(GOOGLE_FORM_ACTION, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                // Show success message
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            }).catch((error) => {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting the form. Please try again.');
             });
         });
 
