@@ -857,16 +857,16 @@
             e.preventDefault();
             
             // REPLACE THESE WITH YOUR ACTUAL GOOGLE FORM VALUES
-            const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
+            const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdY44D0eBAEKyMYtqwoZNPxlx86IH4oba4_-77SCHXUM9hvcg/viewform';
             
             // REPLACE THESE WITH YOUR ACTUAL FIELD NAMES FROM GOOGLE FORM
             const formData = new FormData();
-            formData.append('entry.YOUR_NAME_FIELD', document.getElementById('name').value);
-            formData.append('entry.YOUR_EMAIL_FIELD', document.getElementById('email').value);
-            formData.append('entry.YOUR_MOBILE_FIELD', document.getElementById('mobile').value);
-            formData.append('entry.YOUR_COMPANY_FIELD', document.getElementById('company').value);
-            formData.append('entry.YOUR_SERVICE_FIELD', document.getElementById('service').value);
-            formData.append('entry.YOUR_MESSAGE_FIELD', document.getElementById('message').value);
+            formData.append('entry.971813330', document.getElementById('name').value);
+            formData.append('entry.2144280892', document.getElementById('email').value);
+            formData.append('entry.1720472532', document.getElementById('mobile').value);
+            formData.append('entry.2045618955', document.getElementById('company').value);
+            formData.append('entry.592530910', document.getElementById('service').value);
+            formData.append('entry.1646728584', document.getElementById('message').value);
             
             // Submit to Google Form
             fetch(GOOGLE_FORM_ACTION, {
