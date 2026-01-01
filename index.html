@@ -855,24 +855,33 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            window.alert(document.getElementById('name').value);
-            // REPLACE THESE WITH YOUR ACTUAL GOOGLE FORM VALUES
-            const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdY44D0eBAEKyMYtqwoZNPxlx86IH4oba4_-77SCHXUM9hvcg/formResponse';
             
-            // REPLACE THESE WITH YOUR ACTUAL FIELD NAMES FROM GOOGLE FORM
-            const formData = new FormData();
-            formData.append('entry.971813330', document.getElementById('name').value);
-            formData.append('entry.2144280892', document.getElementById('email').value);
-            formData.append('entry.1720472532', document.getElementById('mobile').value);
-            formData.append('entry.2045618955', document.getElementById('company').value);
-            formData.append('entry.592530910', document.getElementById('service').value);
-            formData.append('entry.1646728584', document.getElementById('message').value);
+            // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+            const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
             
-            // Submit to Google Form
-            fetch(GOOGLE_FORM_ACTION, {
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                mobile: document.getElementById('mobile').value,
+                company: document.getElementById('company').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Submit to Google Sheets
+            fetch(SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
             }).then(() => {
                 // Show success message
                 const successMsg = document.getElementById('successMessage');
@@ -881,6 +890,10 @@
                 // Reset form
                 document.getElementById('contactForm').reset();
                 
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
                 // Hide success message after 5 seconds
                 setTimeout(() => {
                     successMsg.style.display = 'none';
@@ -888,6 +901,10 @@
             }).catch((error) => {
                 console.error('Error submitting form:', error);
                 alert('There was an error submitting the form. Please try again.');
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             });
         });
 
