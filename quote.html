@@ -760,7 +760,7 @@
         
         function saveToGoogleSheets(data) {
             // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-            const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_QUOTATION_SCRIPT_ID/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzi89LgSs96ugy_Vnma5vnYrXGODBiUpA_onuibLpf5hZpFmKY_XHtkormBxGXEtnpJ/exec';
             
             const submitData = {
                 timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
@@ -775,7 +775,7 @@
                 references: data.references || 'None provided',
                 logoDesigned: data.logoDesigned,
                 mediaAvailable: data.mediaAvailable,
-                quotedAmount: data.quote,
+                quote: data.quote,
                 breakdown: data.breakdown.join(' | ')
             };
             
