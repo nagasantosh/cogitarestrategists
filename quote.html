@@ -397,6 +397,18 @@
         <p class="subtitle">Answer a few questions to receive your personalized website development quote</p>
 
         <form class="quote-form" id="quoteForm">
+
+            <div class="form-section">
+                <span class="question-number">Contact Info</span>
+                <label for="customerName">Your Name *</label>
+                <input type="text" id="customerName" name="customerName" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-section">
+                <label for="mobileNumber">Mobile Number *</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                <p class="helper-text">We'll contact you on this number</p>
+            </div>
             <div class="form-section">
                 <span class="question-number">Question 1</span>
                 <label for="companyName">What is the name of your company? *</label>
@@ -592,6 +604,8 @@
             }
             
             // Get form values
+            const customerName = document.getElementById('customerName').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
             const companyName = document.getElementById('companyName').value;
             const visitors = document.getElementById('visitors').value;
             const deadline = document.getElementById('deadline').value;
@@ -623,6 +637,8 @@
             
             // Save to Google Sheets
             saveToGoogleSheets({
+                customerName,
+                mobileNumber,
                 companyName,
                 visitors,
                 actions,
@@ -763,6 +779,8 @@
             
             const submitData = {
                 timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+                customerName: data.customerName,
+                mobileNumber: data.mobileNumber,
                 companyName: data.companyName,
                 visitors: data.visitors,
                 actions: data.actions,
