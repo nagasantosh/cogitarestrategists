@@ -660,18 +660,18 @@
         });
         
         function calculateQuote(data) {
-            let basePrice = 8000; // Base starting price
+            let basePrice = 10000; // Base starting price
             let breakdown = [];
             
             // 1. Website Complexity (based on actions)
             if (data.actions <= 2) {
-                breakdown.push('Basic website (1-2 features): ₹8,000');
+                breakdown.push('Basic website (1-2 features): ₹10,000');
             } else if (data.actions <= 4) {
                 basePrice += 3000;
-                breakdown.push('Intermediate website (3-4 features): ₹11,000');
+                breakdown.push('Intermediate website (3-4 features): ₹13,000');
             } else {
                 basePrice += 6000;
-                breakdown.push('Advanced website (5+ features): ₹14,000');
+                breakdown.push('Advanced website (5+ features): ₹16,000');
             }
             
             // 2. Payment/E-commerce functionality
