@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Website Quote - Cogitare Strategists</title>
+    <meta name="description" content="Get an instant quote for your startup website. Professional web development pricing tailored to your needs.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #f0f0f0;
+            background: #0a0a0a;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #10b981 33%, #fbbf24 66%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #b0b0b0;
+            font-size: 1.1em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #10b981 33%, #fbbf24 66%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .quote-form {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-section {
+            margin-bottom: 35px;
+        }
+
+        .question-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #10b981 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            font-size: 1em;
+            background: rgba(255,255,255,0.05);
+            color: #ffffff;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select {
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        select option {
+            background: #1a1a2e;
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .radio-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .radio-item input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .radio-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #10b981 50%, #fbbf24 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .quote-result {
+            display: none;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(16, 185, 129, 0.5);
+            text-align: center;
+        }
+
+        .quote-result h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #10b981;
+        }
+
+        .quote-amount {
+            font-size: 3.5em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fbbf24 0%, #10b981 50%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+        }
+
+        .quote-details {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .quote-details h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .quote-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quote-details li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: #e0e0e0;
+        }
+
+        .quote-details li:last-child {
+            border-bottom: none;
+        }
+
+        .next-steps {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .next-steps h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .next-steps p {
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #667eea 0%, #10b981 100%);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .helper-text {
+            font-size: 0.9em;
+            color: #808080;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .quote-form {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .quote-amount {
+                font-size: 2.5em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">Cogitare Strategists</div>
+        </a>
+        <p>Get Your Instant Website Quote</p>
+    </div>
+
+    <div class="container">
+        <h1>Website Quotation Calculator</h1>
+        <p class="subtitle">Answer a few questions to receive your personalized website development quote</p>
+
+        <form class="quote-form" id="quoteForm">
+            <div class="form-section">
+                <span class="question-number">Question 1</span>
+                <label for="companyName">What is the name of your company? *</label>
+                <input type="text" id="companyName" name="companyName" required placeholder="Enter your company name">
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 2</span>
+                <label for="visitors">Who are the expected visitors for the website? *</label>
+                <textarea id="visitors" name="visitors" required placeholder="Describe your typical visitor profile including geography (e.g., B2B customers in India, global consumers, enterprise clients in US/Europe)"></textarea>
+                <p class="helper-text">Include visitor type and geographic location</p>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 3</span>
+                <label>What are visitors expected to do on the website? * (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action1" name="actions" value="View services">
+                        <label for="action1">View services/products</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action2" name="actions" value="Contact">
+                        <label for="action2">Contact you</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action3" name="actions" value="Make payments">
+                        <label for="action3">Make payments/purchases</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action4" name="actions" value="Create account">
+                        <label for="action4">Create account/login</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action5" name="actions" value="Book appointments">
+                        <label for="action5">Book appointments/demos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action6" name="actions" value="Download resources">
+                        <label for="action6">Download resources</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="action7" name="actions" value="Other">
+                        <label for="action7">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 4</span>
+                <label for="deadline">By when do you need the website to be live? *</label>
+                <select id="deadline" name="deadline" required>
+                    <option value="">Select timeline</option>
+                    <option value="urgent">Within 1 week (Urgent)</option>
+                    <option value="fast">Within 2 weeks</option>
+                    <option value="normal">Within 1 month</option>
+                    <option value="flexible">1-2 months (Flexible)</option>
+                    <option value="planning">Just planning/exploring</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 5</span>
+                <label for="budget">What is your estimated budget for the website? *</label>
+                <select id="budget" name="budget" required>
+                    <option value="">Select budget range</option>
+                    <option value="5000-10000">₹5,000 - ₹10,000</option>
+                    <option value="10000-15000">₹10,000 - ₹15,000</option>
+                    <option value="15000-20000">₹15,000 - ₹20,000</option>
+                    <option value="20000-25000">₹20,000 - ₹25,000</option>
+                    <option value="25000+">₹25,000+</option>
+                    <option value="not-sure">Not sure yet</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 6</span>
+                <label for="domains">Enter the domain(s) to be considered for the website</label>
+                <input type="text" id="domains" name="domains" placeholder="e.g., mycompany.com, mycompany.in">
+                <p class="helper-text">Leave blank if you haven't decided yet</p>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 7</span>
+                <label>Is any domain registered for the website? *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="domainYes" name="domainRegistered" value="yes" required>
+                        <label for="domainYes">Yes, domain is already registered</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="domainNo" name="domainRegistered" value="no">
+                        <label for="domainNo">No, need help with domain registration</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="domainUnsure" name="domainRegistered" value="unsure">
+                        <label for="domainUnsure">Not sure yet</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 8</span>
+                <label for="emails">How many professional emails do you need along with the website? *</label>
+                <select id="emails" name="emails" required>
+                    <option value="">Select number</option>
+                    <option value="0">0 - Don't need professional emails</option>
+                    <option value="1">1 email</option>
+                    <option value="2">2 emails</option>
+                    <option value="3">3 emails</option>
+                    <option value="4">4 emails</option>
+                    <option value="5">5 emails</option>
+                    <option value="5+">More than 5 emails</option>
+                </select>
+                <p class="helper-text">Professional emails: name@yourcompany.com</p>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 9</span>
+                <label for="references">Are there any reference websites to be used while creating your website?</label>
+                <textarea id="references" name="references" placeholder="Share URLs or names of websites you like (e.g., competitor sites, design inspiration)"></textarea>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 10</span>
+                <label>Is the logo for the company designed? *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="logoYes" name="logoDesigned" value="yes" required>
+                        <label for="logoYes">Yes, logo is ready</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="logoNo" name="logoDesigned" value="no">
+                        <label for="logoNo">No, need logo design</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="logoInProgress" name="logoDesigned" value="in-progress">
+                        <label for="logoInProgress">In progress</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <span class="question-number">Question 11</span>
+                <label>Are there any photos or videos to be used in the website? *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="mediaYes" name="mediaAvailable" value="yes" required>
+                        <label for="mediaYes">Yes, we have photos/videos ready</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="mediaNo" name="mediaAvailable" value="no">
+                        <label for="mediaNo">No, need stock photos/videos</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="mediaSome" name="mediaAvailable" value="some">
+                        <label for="mediaSome">Some available, need additional</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Get My Quote</button>
+        </form>
+
+        <div class="quote-result" id="quoteResult">
+            <h2>Your Website Quote</h2>
+            <div class="quote-amount" id="quoteAmount">₹0</div>
+            <p style="color: #b0b0b0; font-size: 1.1em;">Estimated Project Cost</p>
+
+            <div class="quote-details" id="quoteBreakdown"></div>
+
+            <div class="next-steps">
+                <h3>Next Steps</h3>
+                <p>This is an estimated quote based on your requirements. We'll review your responses and send you a detailed proposal within 24 hours. Our team will contact you to discuss your project in detail and answer any questions.</p>
+                
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="cta-btn cta-primary">Book a Consultation</a>
+                    <a href="index.html" class="cta-btn cta-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate at least one action is selected
+            const actionCheckboxes = document.querySelectorAll('input[name="actions"]:checked');
+            if (actionCheckboxes.length === 0) {
+                alert('Please select at least one action that visitors will perform on your website (Question 3)');
+                document.querySelector('input[name="actions"]').focus();
+                return;
+            }
+            
+            // Get form values
+            const companyName = document.getElementById('companyName').value;
+            const visitors = document.getElementById('visitors').value;
+            const deadline = document.getElementById('deadline').value;
+            const budget = document.getElementById('budget').value;
+            const domains = document.getElementById('domains').value;
+            const domainRegistered = document.querySelector('input[name="domainRegistered"]:checked').value;
+            const emails = document.getElementById('emails').value;
+            const references = document.getElementById('references').value;
+            const logoDesigned = document.querySelector('input[name="logoDesigned"]:checked').value;
+            const mediaAvailable = document.querySelector('input[name="mediaAvailable"]:checked').value;
+            
+            // Get selected actions
+            const actions = Array.from(actionCheckboxes).map(cb => cb.value).join(', ');
+            
+            // Calculate quote
+            const quote = calculateQuote({
+                actions: actionCheckboxes.length,
+                deadline,
+                budget,
+                domainRegistered,
+                emails,
+                references,
+                logoDesigned,
+                mediaAvailable
+            });
+            
+            // Display quote
+            displayQuote(quote);
+            
+            // Save to Google Sheets
+            saveToGoogleSheets({
+                companyName,
+                visitors,
+                actions,
+                deadline,
+                budget,
+                domains,
+                domainRegistered,
+                emails,
+                references,
+                logoDesigned,
+                mediaAvailable,
+                quote: quote.total,
+                breakdown: quote.breakdown
+            });
+            
+            // Scroll to result
+            document.getElementById('quoteResult').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        function calculateQuote(data) {
+            let basePrice = 8000; // Base starting price
+            let breakdown = [];
+            
+            // 1. Website Complexity (based on actions)
+            if (data.actions <= 2) {
+                breakdown.push('Basic website (1-2 features): ₹8,000');
+            } else if (data.actions <= 4) {
+                basePrice += 3000;
+                breakdown.push('Intermediate website (3-4 features): ₹11,000');
+            } else {
+                basePrice += 6000;
+                breakdown.push('Advanced website (5+ features): ₹14,000');
+            }
+            
+            // 2. Payment/E-commerce functionality
+            if (data.actions >= 3) {
+                const hasPayment = Array.from(document.querySelectorAll('input[name="actions"]:checked'))
+                    .some(cb => cb.value === 'Make payments');
+                if (hasPayment) {
+                    basePrice += 3000;
+                    breakdown.push('E-commerce/Payment integration: +₹3,000');
+                }
+            }
+            
+            // 3. User accounts/login system
+            const hasAccounts = Array.from(document.querySelectorAll('input[name="actions"]:checked'))
+                .some(cb => cb.value === 'Create account');
+            if (hasAccounts) {
+                basePrice += 2500;
+                breakdown.push('User account system: +₹2,500');
+            }
+            
+            // 4. Timeline urgency
+            if (data.deadline === 'urgent') {
+                basePrice += 3000;
+                breakdown.push('Rush delivery (1 week): +₹3,000');
+            } else if (data.deadline === 'fast') {
+                basePrice += 1500;
+                breakdown.push('Fast delivery (2 weeks): +₹1,500');
+            } else if (data.deadline === 'flexible') {
+                basePrice -= 1000;
+                breakdown.push('Flexible timeline discount: -₹1,000');
+            }
+            
+            // 5. Domain registration
+            if (data.domainRegistered === 'no') {
+                basePrice += 1000;
+                breakdown.push('Domain registration & setup: +₹1,000');
+            }
+            
+            // 6. Professional emails
+            const emailCount = parseInt(data.emails) || 0;
+            if (emailCount > 0) {
+                const emailCost = emailCount === '5+' ? 2500 : (emailCount * 400);
+                basePrice += emailCost;
+                breakdown.push(`Professional email setup (${emailCount}): +₹${emailCost.toLocaleString('en-IN')}`);
+            }
+            
+            // 7. Logo design
+            if (data.logoDesigned === 'no') {
+                basePrice += 2000;
+                breakdown.push('Logo design: +₹2,000');
+            } else if (data.logoDesigned === 'in-progress') {
+                basePrice += 500;
+                breakdown.push('Logo refinement: +₹500');
+            }
+            
+            // 8. Photos/videos
+            if (data.mediaAvailable === 'no') {
+                basePrice += 1500;
+                breakdown.push('Stock photos & video sourcing: +₹1,500');
+            } else if (data.mediaAvailable === 'some') {
+                basePrice += 800;
+                breakdown.push('Additional stock media: +₹800');
+            }
+            
+            // 9. Reference websites (shows they want custom design)
+            if (data.references && data.references.trim().length > 10) {
+                basePrice += 1000;
+                breakdown.push('Custom design inspired by references: +₹1,000');
+            }
+            
+            // 10. Budget alignment (slight adjustment based on stated budget)
+            if (data.budget === '5000-10000' && basePrice > 10000) {
+                const discount = Math.min(2000, Math.floor((basePrice - 10000) * 0.3));
+                basePrice -= discount;
+                breakdown.push(`Budget-conscious discount: -₹${discount.toLocaleString('en-IN')}`);
+            }
+            
+            // Round to nearest 100
+            basePrice = Math.round(basePrice / 100) * 100;
+            
+            // Ensure within range
+            basePrice = Math.max(5000, Math.min(25000, basePrice));
+            
+            return {
+                total: basePrice,
+                breakdown: breakdown
+            };
+        }
+        
+        function displayQuote(quote) {
+            document.getElementById('quoteAmount').textContent = `₹${quote.total.toLocaleString('en-IN')}`;
+            
+            let breakdownHTML = '<h3>Price Breakdown</h3><ul>';
+            quote.breakdown.forEach(item => {
+                breakdownHTML += `<li>${item}</li>`;
+            });
+            breakdownHTML += '</ul>';
+            
+            document.getElementById('quoteBreakdown').innerHTML = breakdownHTML;
+            document.getElementById('quoteResult').style.display = 'block';
+        }
+        
+        function saveToGoogleSheets(data) {
+            // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+            const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_QUOTATION_SCRIPT_ID/exec';
+            
+            const submitData = {
+                timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+                companyName: data.companyName,
+                visitors: data.visitors,
+                actions: data.actions,
+                deadline: data.deadline,
+                budget: data.budget,
+                domains: data.domains || 'Not specified',
+                domainRegistered: data.domainRegistered,
+                emails: data.emails,
+                references: data.references || 'None provided',
+                logoDesigned: data.logoDesigned,
+                mediaAvailable: data.mediaAvailable,
+                quotedAmount: data.quote,
+                breakdown: data.breakdown.join(' | ')
+            };
+            
+            // Disable button
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.textContent = 'Saving...';
+            submitBtn.disabled = true;
+            
+            // Submit to Google Sheets
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(submitData)
+            }).then(() => {
+                console.log('Quote saved successfully');
+                submitBtn.textContent = 'Quote Generated!';
+                setTimeout(() => {
+                    submitBtn.textContent = 'Get My Quote';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }).catch((error) => {
+                console.error('Error saving quote:', error);
+                submitBtn.textContent = 'Get My Quote';
+                submitBtn.disabled = false;
+            });
+        }
+    </script>
+</body>
