@@ -716,7 +716,7 @@ img {
 .process-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
