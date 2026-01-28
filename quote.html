@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get an instant website quote from Cogitare Strategists. Answer a few questions and receive your personalized pricing estimate.">
+    <title>Get Your Website Quote - Cogitare Strategists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Cogitare Strategists</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="plans.html" class="nav-link">Pricing</a></li>
+                    <li><a href="quote.html" class="nav-link active">Get Quote</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-label">Get Your Instant Website Quote</span>
+            <h1 class="fade-in">Website Quotation Calculator</h1>
+            <p class="page-description fade-in-delay-1">
+                Answer a few questions to receive your personalized website development quote
+            </p>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-grid">
+                <!-- Quote Form -->
+                <div class="quote-form-wrapper">
+                    <form id="quoteForm" class="quote-form">
+                        
+                        <!-- Contact Info Section -->
+                        <div class="form-section">
+                            <h3 class="section-title">Contact Info</h3>
+                            
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    placeholder="John Doe"
+                                    class="form-input"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number *</label>
+                                <input 
+                                    type="tel" 
+                                    id="mobile" 
+                                    name="mobile" 
+                                    required 
+                                    placeholder="+91 98765 43210"
+                                    class="form-input"
+                                >
+                                <small class="input-hint">We'll contact you on this number</small>
+                            </div>
+                        </div>
+
+                        <!-- Question 1 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 1</h3>
+                            <div class="form-group">
+                                <label for="companyName">What is the name of your company? *</label>
+                                <input 
+                                    type="text" 
+                                    id="companyName" 
+                                    name="companyName" 
+                                    required 
+                                    placeholder="Your Company Name"
+                                    class="form-input"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 2</h3>
+                            <div class="form-group">
+                                <label for="targetAudience">Who are the expected visitors for the website? *</label>
+                                <textarea 
+                                    id="targetAudience" 
+                                    name="targetAudience" 
+                                    required 
+                                    rows="3"
+                                    placeholder="Example: Local customers in Mumbai, Small business owners, etc."
+                                    class="form-input"
+                                ></textarea>
+                                <small class="input-hint">Include visitor type and geographic location</small>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 3</h3>
+                            <div class="form-group">
+                                <label>What are visitors expected to do on the website? * (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="View services/products" data-cost="0">
+                                        View services/products
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Contact you" data-cost="0">
+                                        Contact you
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Make payments/purchases" data-cost="5000">
+                                        Make payments/purchases
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Create account/login" data-cost="3000">
+                                        Create account/login
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Book appointments/demos" data-cost="2000">
+                                        Book appointments/demos
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Download resources" data-cost="1000">
+                                        Download resources
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="actions" value="Other" data-cost="0">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 4</h3>
+                            <div class="form-group">
+                                <label for="timeline">By when do you need the website to be live? *</label>
+                                <select id="timeline" name="timeline" required class="form-input" data-pricing>
+                                    <option value="">Select timeline</option>
+                                    <option value="Within 1 week (Urgent)" data-cost="5000">Within 1 week (Urgent)</option>
+                                    <option value="Within 2 weeks" data-cost="3000">Within 2 weeks</option>
+                                    <option value="Within 1 month" data-cost="1000">Within 1 month</option>
+                                    <option value="1-2 months (Flexible)" data-cost="0">1-2 months (Flexible)</option>
+                                    <option value="Just planning/exploring" data-cost="0">Just planning/exploring</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 5</h3>
+                            <div class="form-group">
+                                <label for="budget">What is your estimated budget for the website? *</label>
+                                <select id="budget" name="budget" required class="form-input">
+                                    <option value="">Select budget range</option>
+                                    <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
+                                    <option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000</option>
+                                    <option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000</option>
+                                    <option value="₹20,000 - ₹25,000">₹20,000 - ₹25,000</option>
+                                    <option value="₹25,000+">₹25,000+</option>
+                                    <option value="Not sure yet">Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 6</h3>
+                            <div class="form-group">
+                                <label for="domains">Enter the domain(s) to be considered for the website</label>
+                                <input 
+                                    type="text" 
+                                    id="domains" 
+                                    name="domains" 
+                                    placeholder="example.com, mycompany.in"
+                                    class="form-input"
+                                >
+                                <small class="input-hint">Leave blank if you haven't decided yet</small>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 7</h3>
+                            <div class="form-group">
+                                <label for="domainStatus">Is any domain registered for the website? *</label>
+                                <select id="domainStatus" name="domainStatus" required class="form-input" data-pricing>
+                                    <option value="">Select option</option>
+                                    <option value="Yes, domain is already registered" data-cost="0">Yes, domain is already registered</option>
+                                    <option value="No, need help with domain registration" data-cost="1000">No, need help with domain registration</option>
+                                    <option value="Not sure yet" data-cost="0">Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 8</h3>
+                            <div class="form-group">
+                                <label for="emails">How many professional emails do you need along with the website? *</label>
+                                <select id="emails" name="emails" required class="form-input" data-pricing>
+                                    <option value="">Select number</option>
+                                    <option value="0 - Don't need professional emails" data-cost="0">0 - Don't need professional emails</option>
+                                    <option value="1 email" data-cost="500">1 email</option>
+                                    <option value="2 emails" data-cost="1000">2 emails</option>
+                                    <option value="3 emails" data-cost="1500">3 emails</option>
+                                    <option value="4 emails" data-cost="2000">4 emails</option>
+                                    <option value="5 emails" data-cost="2500">5 emails</option>
+                                    <option value="More than 5 emails" data-cost="3000">More than 5 emails</option>
+                                </select>
+                                <small class="input-hint">Professional emails: name@yourcompany.com</small>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 9</h3>
+                            <div class="form-group">
+                                <label for="references">Are there any reference websites to be used while creating your website?</label>
+                                <textarea 
+                                    id="references" 
+                                    name="references" 
+                                    rows="3"
+                                    placeholder="https://example.com, https://inspiration.com"
+                                    class="form-input"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 10</h3>
+                            <div class="form-group">
+                                <label for="logoStatus">Is the logo for the company designed? *</label>
+                                <select id="logoStatus" name="logoStatus" required class="form-input" data-pricing>
+                                    <option value="">Select option</option>
+                                    <option value="Yes, logo is ready" data-cost="0">Yes, logo is ready</option>
+                                    <option value="No, need logo design" data-cost="3000">No, need logo design</option>
+                                    <option value="In progress" data-cost="0">In progress</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Question 11 -->
+                        <div class="form-section">
+                            <h3 class="section-title">Question 11</h3>
+                            <div class="form-group">
+                                <label for="media">Are there any photos or videos to be used in the website? *</label>
+                                <select id="media" name="media" required class="form-input" data-pricing>
+                                    <option value="">Select option</option>
+                                    <option value="Yes, we have photos/videos ready" data-cost="0">Yes, we have photos/videos ready</option>
+                                    <option value="No, need stock photos/videos" data-cost="2000">No, need stock photos/videos</option>
+                                    <option value="Some available, need additional" data-cost="1000">Some available, need additional</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit" id="quoteSubmitBtn">
+                            <span class="btn-text">Get My Quote</span>
+                            <span class="btn-loading" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 24 24">
+                                    <circle class="spinner-circle" cx="12" cy="12" r="10" fill="none" stroke-width="3"/>
+                                </svg>
+                                Processing...
+                            </span>
+                        </button>
+
+                        <div class="form-message" id="quoteFormMessage"></div>
+                    </form>
+                </div>
+
+                <!-- Live Quote Calculator -->
+                <div class="quote-calculator">
+                    <div class="calculator-sticky">
+                        <h2>Your Website Quote</h2>
+                        <div class="quote-amount">
+                            <span class="currency">₹</span>
+                            <span class="amount" id="quoteAmount">10,000</span>
+                        </div>
+                        <p class="quote-label">Estimated Project Cost</p>
+                        
+                        <div class="quote-breakdown" id="quoteBreakdown">
+                            <h4>Cost Breakdown</h4>
+                            <div class="breakdown-item">
+                                <span>Base Website</span>
+                                <span>₹10,000</span>
+                            </div>
+                        </div>
+
+                        <div class="next-steps-box">
+                            <h4>Next Steps</h4>
+                            <p>This is an estimated quote based on your requirements. We'll review your responses and send you a detailed proposal within 24 hours.</p>
+                            <p>Our team will contact you to discuss your project in detail and answer any questions.</p>
+                        </div>
+
+                        <div class="calculator-actions">
+                            <a href="contact.html" class="btn-secondary">Discuss with Expert</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Cogitare Strategists</h3>
+                    <p>Strategic web development for startups, small businesses, and interior designers.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="plans.html">Pricing</a></li>
+                            <li><a href="quote.html">Get Quote</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#startups">Startup Websites</a></li>
+                            <li><a href="#small-business">Small Business Sites</a></li>
+                            <li><a href="#interior-design">Interior Designer Portfolios</a></li>
+                            <li><a href="#maintenance">Website Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@cogitarestrategists.com">hello@cogitarestrategists.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cogitare Strategists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quote-calculator.js"></script>
+</body>
+</html>
