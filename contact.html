@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Cogitare Strategists - Get in touch to discuss your website project. Book a demo or request a consultation.">
+    <title>Contact Us - Cogitare Strategists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Cogitare Strategists</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="plans.html" class="nav-link">Pricing</a></li>
+                    <li><a href="quote.html" class="nav-link">Get Quote</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-label">Get In Touch</span>
+            <h1 class="fade-in">Let's Build Something Great Together</h1>
+            <p class="page-description fade-in-delay-1">
+                Ready to start your project? Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Book a Free Demo</h2>
+                    <p class="form-intro">Tell us about your project and we'll schedule a personalized demo to show you how we can help.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                placeholder="John Doe"
+                                class="form-input"
+                            >
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    placeholder="john@example.com"
+                                    class="form-input"
+                                >
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required 
+                                    placeholder="+1 (234) 567-8900"
+                                    class="form-input"
+                                >
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="businessType">Business Type *</label>
+                            <select id="businessType" name="businessType" required class="form-input">
+                                <option value="">Select your business type</option>
+                                <option value="startup">Startup</option>
+                                <option value="small-business">Small Business</option>
+                                <option value="interior-designer">Interior Designer</option>
+                                <option value="e-commerce">E-commerce</option>
+                                <option value="professional-services">Professional Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="businessTypeError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input 
+                                type="text" 
+                                id="companyName" 
+                                name="companyName" 
+                                placeholder="Your company name"
+                                class="form-input"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">When do you need the website?</label>
+                            <select id="timeline" name="timeline" class="form-input">
+                                <option value="">Select timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="2-3-months">2-3 months</option>
+                                <option value="flexible">Flexible / Just exploring</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell us about your project *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required 
+                                rows="5" 
+                                placeholder="What are your goals for the website? What features do you need?"
+                                class="form-input"
+                            ></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            <label for="newsletter">I'd like to receive updates and tips about web development</label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 24 24">
+                                    <circle class="spinner-circle" cx="12" cy="12" r="10" fill="none" stroke-width="3"/>
+                                </svg>
+                                Sending...
+                            </span>
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Our team typically responds within 24 hours</p>
+                        <a href="mailto:hello@cogitarestrategists.com" class="info-link">hello@cogitarestrategists.com</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Monday - Friday, 9 AM - 6 PM EST</p>
+                        <a href="tel:+1234567890" class="info-link">+1 (234) 567-890</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>Quick Response</h3>
+                        <p>Average response time: 4 hours during business hours</p>
+                    </div>
+
+                    <div class="info-card highlight-card">
+                        <h3>What Happens Next?</h3>
+                        <ul class="next-steps">
+                            <li>
+                                <span class="step-number">1</span>
+                                <div>
+                                    <strong>We Review Your Request</strong>
+                                    <p>Our team reads your message and prepares for the conversation</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">2</span>
+                                <div>
+                                    <strong>Schedule Your Demo</strong>
+                                    <p>We'll email you within 24 hours to book a convenient time</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">3</span>
+                                <div>
+                                    <strong>Personalized Consultation</strong>
+                                    <p>We discuss your goals and show you relevant examples</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">4</span>
+                                <div>
+                                    <strong>Custom Proposal</strong>
+                                    <p>Receive a detailed quote tailored to your needs</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Common Questions</span>
+                <h2>Before You Reach Out</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How long does it take to build a website?</h4>
+                    <p>Most projects are completed within 2-4 weeks, depending on complexity and feature requirements. We'll provide a specific timeline during our consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer ongoing support?</h4>
+                    <p>Yes! All our packages include post-launch support. We also offer monthly maintenance plans for updates, security, and technical assistance.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What information do you need to get started?</h4>
+                    <p>We'll need your business goals, target audience, desired features, and any brand assets (logos, colors, content). We'll guide you through everything during the consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you help with content and images?</h4>
+                    <p>Absolutely! We offer content writing services and can help source or create images. For interior designers, we specialize in showcasing your portfolio beautifully.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prefer to Get a Quote First?</h2>
+                <p>Use our instant quote calculator to get pricing estimates in minutes.</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn-primary">Get Instant Quote</a>
+                    <a href="plans.html" class="btn-outline">View Pricing Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Cogitare Strategists</h3>
+                    <p>Strategic web development for startups, small businesses, and interior designers.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="plans.html">Pricing</a></li>
+                            <li><a href="quote.html">Get Quote</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#startups">Startup Websites</a></li>
+                            <li><a href="#small-business">Small Business Sites</a></li>
+                            <li><a href="#interior-design">Interior Designer Portfolios</a></li>
+                            <li><a href="#maintenance">Website Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@cogitarestrategists.com">hello@cogitarestrategists.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cogitare Strategists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
