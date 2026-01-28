@@ -1769,10 +1769,6 @@ select.form-input {
         grid-template-columns: 1fr;
     }
 
-   .process-arrow {
-        transform: rotate(90deg);
-    }
-
     .footer-content {
         grid-template-columns: 1fr;
     }
