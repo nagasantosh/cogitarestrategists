@@ -715,8 +715,8 @@ img {
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    grid-template-columns: 2fr, 1fr, 2fr, 1fr, 2fr, 1fr, 2fr;
+    gap: 20px;
     align-items: center;
 }
 
