@@ -1563,7 +1563,7 @@ select.form-input {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: white;
     line-height: 1;
 }
 
@@ -1571,7 +1571,7 @@ select.form-input {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--accent);
+    color: white;
 }
 
 .package-features {
