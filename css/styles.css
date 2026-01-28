@@ -1925,3 +1925,74 @@ select.form-input {
         height: 350px;
     }
 }
+
+/* Mobile Comparison Cards */
+.comparison-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Hide table on mobile */
+    .comparison-table {
+        display: none;
+    }
+    
+    /* Show mobile cards */
+    .comparison-mobile {
+        display: block;
+    }
+    
+    .comparison-package {
+        background: white;
+        border-radius: 8px;
+        padding: 30px 25px;
+        margin-bottom: 30px;
+        border: 2px solid var(--border);
+    }
+    
+    .comparison-package.popular {
+        border-color: var(--accent);
+        border-width: 3px;
+    }
+    
+    .comparison-package-header {
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--border);
+    }
+    
+    .comparison-package-header h3 {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 5px;
+    }
+    
+    .comparison-package-header.popular h3 {
+        color: var(--accent);
+    }
+    
+    .comparison-feature-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--background);
+    }
+    
+    .comparison-feature-row:last-child {
+        border-bottom: none;
+    }
+    
+    .comparison-feature-name {
+        font-weight: 600;
+        color: var(--text);
+        font-size: 1rem;
+    }
+    
+    .comparison-feature-value {
+        font-size: 1.2rem;
+        color: var(--accent);
+        font-weight: 700;
+    }
+}
