@@ -6,7 +6,7 @@
 const QUOTE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnyVGEApUL-yyAXgVEF6DKXR_2nFYpRaJXK-lL76Vkafw51TnuPBoDpaYG3GpxRl6w/exec';
 
 // Base pricing
-const BASE_PRICE = 10000; // ₹10,000 base website cost
+const BASE_PRICE = 12500; // ₹12,500 base website cost
 
 // Pricing state
 let currentQuote = {
