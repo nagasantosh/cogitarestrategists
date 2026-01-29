@@ -1381,6 +1381,15 @@ select.form-input {
     margin-left: 5px;
 }
 
+.amount_quote {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    display: inline-block;
+    margin-left: 5px;
+}
+
 .quote-label {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
@@ -1571,7 +1580,7 @@ select.form-input {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: white;
+    color: black;
 }
 
 .package-features {
