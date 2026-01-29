@@ -1375,7 +1375,7 @@ select.form-input {
 .amount {
     font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    color: black;
     font-family: 'Playfair Display', serif;
     display: inline-block;
     margin-left: 5px;
@@ -1563,7 +1563,7 @@ select.form-input {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    color: black;
     line-height: 1;
 }
 
