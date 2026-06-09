@@ -3,7 +3,7 @@
 // ============================================
 
 // IMPORTANT: Replace this URL with your Google Apps Script Web App URL
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyS-Be4r6bRkt6xbzv_7iJvVDdQSQvMyJBTojr8Pl6GqpN5bNMmSQPsR7aikWu1dO4qZg/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXTnKGpWx1Rl9VD3hNciEp4zjhUMmNj5F2QN4ZH_7ggUrItGDz7EbRhU-utu_srxXXvQ/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
