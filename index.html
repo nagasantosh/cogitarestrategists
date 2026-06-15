@@ -1,350 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17958950446"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17958950446');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cogitare Strategists - Web design and development for startups, small businesses, and interior designers. We create websites that convert visitors into customers.">
-    <title>Cogitare Strategists - Web Development for Startups & Small Businesses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cogitare Strategists | AI Consulting & Learning</title>
+  <meta
+    name="description"
+    content="AI consulting and learning for organizations preparing to build AI capability and work with AI Teams."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">Cogitare Strategists</a>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="plans.html" class="nav-link">Pricing</a></li>
-                    <li><a href="quote.html" class="nav-link">Get Quote</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-                </ul>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <main class="page">
+    <header class="nav">
+      <a href="/" class="brand" aria-label="Cogitare Strategists home">
+        <span>Cogitare</span>
+        <b>Strategists</b>
+      </a>
 
-    <!-- Hero Section -->
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#question">Question</a>
+        <a href="#engagements">Engagements</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        class="nav-button"
+        href="https://wa.me/919182626500"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Start a Conversation
+      </a>
+    </header>
+
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="fade-in">We Build Websites That Grow Businesses</h1>
-                    <p class="hero-description fade-in-delay-1">
-                        We partner with startups and small businesses to create distinctive digital experiences that convert visitors into customers. From interior design studios to tech innovators, we build websites that make an impact.
-                    </p>
-                    <div class="hero-cta fade-in-delay-2">
-                        <a href="contact.html" class="btn-primary">Book a Demo</a>
-                        <a href="quote.html" class="btn-secondary">Get Instant Quote</a>
-                    </div>
-                </div>
-<div class="hero-visual fade-in-delay-1">
-                    <div class="visual-card">
-                        <div class="floating-shapes">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-                        </div>
-                        <div class="visual-elements">
-                            <div class="visual-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                    <line x1="8" y1="21" x2="16" y2="21"/>
-                                    <line x1="12" y1="17" x2="12" y2="21"/>
-                                    <path d="M6 7h12M6 11h12"/>
-                                </svg>
-                            </div>
-                            <div class="visual-text">Design. Develop. Deploy.</div>
-                            <div class="visual-subtext">Professional websites that grow with your business</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-card">
+        <p class="kicker">AI Consulting & Learning</p>
+
+        <h1>Preparing organizations for the age of AI Teams.</h1>
+
+        <div class="hero-footer">
+          <p>
+            Most organizations are experimenting with AI. Few are preparing for AI Teams.
+            We help leaders build readiness, capability and practical roadmaps for adoption.
+          </p>
+
+          <a href="#contact" class="primary-link">Start a conversation →</a>
         </div>
+      </div>
+
+      <section class="journey-band" aria-label="AI Teams preparation journey">
+        <div class="journey-band-item">Understand where AI fits</div>
+        <span>→</span>
+        <div class="journey-band-item">Build organizational readiness</div>
+        <span>→</span>
+        <div class="journey-band-item">Prepare for AI Teams</div>
+      </section>
     </section>
 
-    <!-- Target Audience Section -->
-    <section class="audience-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Who We Serve</span>
-                <h2>Built for Businesses Ready to Grow</h2>
-            </div>
-            <div class="audience-grid">
-                <div class="audience-card card-slide-in">
-                    <div class="audience-number">01</div>
-                    <h3>Startups</h3>
-                    <p>Launch your vision with a website that captures attention and validates your idea. We help early-stage companies establish credibility and attract their first customers.</p>
-                    <ul class="audience-features">
-                        <li>MVP landing pages</li>
-                        <li>Investor-ready presentations</li>
-                        <li>Scalable architecture</li>
-                        <li>Fast deployment</li>
-                    </ul>
-                </div>
-                <div class="audience-card card-slide-in card-delay-1">
-                    <div class="audience-number">02</div>
-                    <h3>Small Businesses</h3>
-                    <p>Compete with the big players. Our websites help local businesses expand their reach, streamline operations, and build lasting customer relationships.</p>
-                    <ul class="audience-features">
-                        <li>Lead generation systems</li>
-                        <li>E-commerce solutions</li>
-                        <li>Local SEO optimization</li>
-                        <li>Customer portals</li>
-                    </ul>
-                </div>
-                <div class="audience-card card-highlight card-slide-in card-delay-2">
-                    <div class="audience-number featured">03</div>
-                    <div class="featured-badge">Specialty Focus</div>
-                    <h3>Interior Designers</h3>
-                    <p>Showcase your portfolio with stunning visual design that reflects your aesthetic. We create websites that let your work speak for itself and attract high-value clients.</p>
-                    <ul class="audience-features">
-                        <li>Portfolio galleries</li>
-                        <li>Project showcases</li>
-                        <li>Client testimonials</li>
-                        <li>Booking systems</li>
-                    </ul>
-                    <div class="card-accent"></div>
-                </div>
-            </div>
-        </div>
+    <section class="question-section" id="question">
+      <div class="question-intro">
+        <div class="section-label">The question</div>
+        <h2>What happens when AI becomes part of the team?</h2>
+      </div>
+
+      <div class="question-body">
+        <p>
+          Most organizations are still evaluating AI as a tool. A more important
+          question is beginning to emerge.
+        </p>
+        <p>
+          When AI becomes capable of supporting decisions, retaining knowledge,
+          improving workflows and contributing to outcomes, how should organizations respond?
+        </p>
+      </div>
+
+      <div class="question-prompt">
+        <span>For leaders, this changes the conversation from:</span>
+        <b>“Which AI tool should we use?”</b>
+        <strong>to</strong>
+        <b>“How should our organization work with AI?”</b>
+      </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-section">
-        <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <span class="section-label">Why Cogitare Strategists</span>
-                    <h2>Strategic Design That Delivers Results</h2>
-                    <p class="why-description">
-                        We're not just building websites—we're creating digital experiences that drive business growth. Every design decision is rooted in strategy, user behavior, and your unique goals.
-                    </p>
-                    <div class="why-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2-4 weeks</div>
-                            <div class="stat-label">Average Delivery</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="why-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5"/>
-                                <path d="M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <div class="feature-text">
-                            <h4>Modern Technology Stack</h4>
-                            <p>Built with the latest web technologies for speed, security, and scalability.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="9" y1="9" x2="15" y2="15"/>
-                                <line x1="15" y1="9" x2="9" y2="15"/>
-                            </svg>
-                        </div>
-                        <div class="feature-text">
-                            <h4>Mobile-First Design</h4>
-                            <p>Seamless experiences across all devices, from smartphones to desktops.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <div class="feature-text">
-                            <h4>Fast Turnaround</h4>
-                            <p>Get your website live in weeks, not months. We value your time and momentum.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                        </div>
-                        <div class="feature-text">
-                            <h4>Dedicated Support</h4>
-                            <p>Ongoing maintenance and updates to keep your website performing at its best.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="realities-section">
+      <div class="section-header">
+        <span>Three realities</span>
+        <h2>What we see repeatedly</h2>
+      </div>
+
+      <div class="realities-grid">
+        <article>
+          <span>01</span>
+          <h3>Everyone knows AI matters</h3>
+          <p>Most leadership teams understand that AI will affect how work gets done.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Few know where to start</h3>
+          <p>Organizations often struggle to identify meaningful opportunities and practical next steps.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Even fewer know how to build capability</h3>
+          <p>Adopting AI is not only about technology. It is about people, workflows, knowledge, governance and learning.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Interior Design Focus Section -->
-    <section class="interior-section">
-        <div class="container">
-            <div class="interior-content">
-                <div class="interior-text">
-                    <span class="section-label-light">Specialty Service</span>
-                    <h2 class="interior-heading">Websites for Interior Designers Who Want to Stand Out</h2>
-                    <p class="interior-description">
-                        Your portfolio deserves more than a template. We create custom websites that showcase your design aesthetic, highlight your best projects, and attract the clients you want to work with.
-                    </p>
-                    <div class="interior-features-list">
-                        <div class="interior-feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>High-resolution image galleries optimized for web</span>
-                        </div>
-                        <div class="interior-feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Project case studies that tell your story</span>
-                        </div>
-                        <div class="interior-feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Contact forms and booking systems</span>
-                        </div>
-                        <div class="interior-feature">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>SEO optimization to reach local clients</span>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="btn-light">Discuss Your Project</a>
-                </div>
-                <div class="interior-visual">
-                    <div class="interior-showcase">
-                        <div class="showcase-item showcase-1"></div>
-                        <div class="showcase-item showcase-2"></div>
-                        <div class="showcase-item showcase-3"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="engagements-section" id="engagements">
+      <div class="section-header">
+        <span>How we help</span>
+        <h2>Three ways organizations typically engage with us</h2>
+      </div>
+
+      <div class="engagements-grid">
+        <article>
+          <h3>AI Leadership Briefing</h3>
+          <p>A focused session for founders, partners and leadership teams to understand the opportunities, risks and implications of AI.</p>
+          <a href="#contact">Discuss this engagement →</a>
+        </article>
+
+        <article>
+          <h3>AI Readiness Assessment</h3>
+          <p>An assessment of people, workflows, knowledge, governance and current AI maturity.</p>
+          <a href="#contact">Discuss this engagement →</a>
+        </article>
+
+        <article>
+          <h3>AI Team Roadmap</h3>
+          <p>A practical roadmap for organizations preparing to work with human + AI teams.</p>
+          <a href="#contact">Discuss this engagement →</a>
+        </article>
+      </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-label">Our Process</span>
-                <h2>From Concept to Launch in Four Steps</h2>
-            </div>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-number">1</div>
-                    <h3>Discovery</h3>
-                    <p>We start by understanding your business, goals, and target audience. Every great website begins with strategy.</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <div class="process-number">2</div>
-                    <h3>Design</h3>
-                    <p>We create mockups that bring your vision to life, with multiple rounds of feedback to get it perfect.</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <div class="process-number">3</div>
-                    <h3>Development</h3>
-                    <p>Our team builds your website with clean code, ensuring it's fast, secure, and easy to maintain.</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <div class="process-number">4</div>
-                    <h3>Launch</h3>
-                    <p>We deploy your site, train your team, and provide ongoing support to ensure continued success.</p>
-                </div>
-            </div>
-        </div>
+    <section class="journey-section" id="journey">
+      <div class="section-header">
+        <span>The journey</span>
+        <h2>Organizations do not move directly from curiosity to AI Teams.</h2>
+      </div>
+
+      <div class="journey-line">
+        <div class="journey-item"><b>Awareness</b><span>→</span></div>
+        <div class="journey-item"><b>Readiness</b><span>→</span></div>
+        <div class="journey-item"><b>Roadmap</b><span>→</span></div>
+        <div class="journey-item"><b>Capability</b><span>→</span></div>
+        <div class="journey-item"><b>AI Teams</b></div>
+      </div>
+
+      <p>
+        They build awareness. They assess readiness. They define a roadmap.
+        They develop capability. Only then do AI Teams become sustainable.
+      </p>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Build Your Website?</h2>
-                <p>Get a custom quote in minutes or schedule a call to discuss your project.</p>
-                <div class="cta-buttons">
-                    <a href="quote.html" class="btn-primary">Get Instant Quote</a>
-                    <a href="contact.html" class="btn-outline">Book a Demo</a>
-                </div>
-            </div>
-        </div>
+    <section class="focus-section">
+      <div class="section-header">
+        <span>What we focus on</span>
+        <h2>Practical areas where organizations need clarity</h2>
+      </div>
+
+      <div class="focus-grid">
+        <article>
+          <h3>AI Strategy</h3>
+          <p>Define where AI can create meaningful business value.</p>
+        </article>
+
+        <article>
+          <h3>AI Readiness</h3>
+          <p>Assess your current maturity across people, workflows, knowledge and governance.</p>
+        </article>
+
+        <article>
+          <h3>AI Learning</h3>
+          <p>Prepare leaders and teams to work confidently with AI.</p>
+        </article>
+
+        <article>
+          <h3>AI Governance</h3>
+          <p>Create simple guardrails for responsible and practical adoption.</p>
+        </article>
+
+        <article>
+          <h3>AI Team Design</h3>
+          <p>Identify AI team mates, roles, workflows and success measures.</p>
+        </article>
+
+        <article>
+          <h3>Implementation Support</h3>
+          <p>Support the move from roadmap to practical adoption.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
+    <section class="bridge-section">
+      <div class="bridge-header">
+        <div class="section-label">From strategy to implementation</div>
+        <h2>Cogitare Strategists prepares the organization. UToldAI provides the AI Teams.</h2>
+        <p>
+          Consulting and learning help organizations understand what to do.
+          A platform helps them put that thinking into practice.
+        </p>
+      </div>
+
+      <div class="bridge-flow">
+        <article>
+          <span>Consulting & Learning</span>
+          <b>Cogitare Strategists</b>
+          <p>Readiness, roadmap, learning, AI team design and adoption support.</p>
+        </article>
+
+        <div class="bridge-arrow">→</div>
+
+        <article>
+          <span>AI Teams Platform</span>
+          <b>UToldAI</b>
+          <p>AI Teams designed around business outcomes when the organization is ready to implement.</p>
+        </article>
+      </div>
+
+      <a class="bridge-link" href="https://www.utoldai.com" target="_blank" rel="noreferrer">
+        Visit UToldAI →
+      </a>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-intro">
+        <div class="section-label">Contact</div>
+        <h2>Start with a conversation.</h2>
+        <p>
+          Tell us where your organization is in its AI journey.
+          We will help you identify the most practical next step.
+        </p>
+      </div>
+
+      <form class="contact-form" onsubmit="sendWhatsApp(event)">
+        <label>
+          Name
+          <input id="name" name="name" required />
+        </label>
+
+        <label>
+          Organization
+          <input id="organization" name="organization" />
+        </label>
+
+        <label>
+          Email
+          <input id="email" name="email" type="email" required />
+        </label>
+
+        <label>
+          What would you like to discuss?
+          <textarea
+            id="message"
+            name="message"
+            placeholder="AI readiness, leadership briefing, AI roadmap, AI team design..."
+          ></textarea>
+        </label>
+
+        <button type="submit">Send on WhatsApp</button>
+      </form>
+    </section>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Cogitare Strategists</h3>
-                    <p>Strategic web development for startups, small businesses, and interior designers.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="plans.html">Pricing</a></li>
-                            <li><a href="quote.html">Get Quote</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li>Startup Websites</li>
-                            <li>Small Business Sites</li>
-                            <li>Interior Designer Portfolios</li>
-                            <li>Website Maintenance</li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="mailto:admin@cogitarestrategists.com">admin@cogitarestrategists.com</a></li>
-                            <li><a href="tel:+919182626500">+91 9182626500</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Cogitare Strategists. All rights reserved.</p>
-            </div>
-        </div>
+      <b>Cogitare Strategists</b>
+      <span>AI Consulting & Learning</span>
+      <a href="https://wa.me/919182626500" target="_blank" rel="noreferrer">
+        WhatsApp Us
+      </a>
     </footer>
+  </main>
 
-    <script src="js/main.js"></script>
+  <script>
+    function sendWhatsApp(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const organization = document.getElementById("organization").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const text = [
+        "Hi Cogitare Strategists,",
+        "",
+        "I would like to discuss AI consulting and learning for my organization.",
+        "",
+        "Name: " + name,
+        "Organization: " + organization,
+        "Email: " + email,
+        "Message: " + message
+      ].join("\\n");
+
+      const url = "https://wa.me/919182626500?text=" + encodeURIComponent(text);
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
