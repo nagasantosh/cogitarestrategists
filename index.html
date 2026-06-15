@@ -18,6 +18,10 @@
         <b>Strategists</b>
       </a>
 
+      <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰
+      </button>
+
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#question">Question</a>
         <a href="#engagements">Engagements</a>
@@ -278,6 +282,17 @@
   </main>
 
   <script>
+    function toggleMenu() {
+      const nav = document.querySelector(".nav-links");
+      nav.classList.toggle("show");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.remove("show");
+      });
+    });
+
     function sendWhatsApp(event) {
       event.preventDefault();
 
