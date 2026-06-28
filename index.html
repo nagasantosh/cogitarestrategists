@@ -37,6 +37,10 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:
 .btn-ghost:hover{background:rgba(201,162,75,.12);transform:translateY(-2px);}
 .btn-ghost.dark{color:var(--navy);border-color:rgba(13,34,68,.25);}
 .btn-ghost.dark:hover{background:rgba(13,34,68,.05);}
+.dl-link{font-size:.88rem;font-weight:500;color:var(--goldt);display:inline-flex;align-items:center;gap:7px;transition:color .2s;}
+.dl-link:hover{color:var(--gold);}
+.dl-link svg{width:15px;height:15px;}
+.work-ctas{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
 
 /* mark */
 .mk{width:38px;height:38px;flex:0 0 auto;display:block;}
@@ -392,7 +396,13 @@ footer .fcopy{margin-top:26px;padding-top:22px;border-top:1px solid rgba(174,189
           <div class="m"><div class="k">For</div><div class="v">Leadership &amp; teams</div></div>
           <div class="m"><div class="k">Prep</div><div class="v">None required</div></div>
         </div>
-        <a href="#contact" class="btn btn-ghost dark">Scope a workshop →</a>
+        <div class="work-ctas">
+          <a href="#contact" class="btn btn-ghost dark">Scope a workshop →</a>
+          <a href="downloads/AI-Agents-Workshop-Overview.pdf" class="dl-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
+            Download the overview (PDF)
+          </a>
+        </div>
       </div>
     </div>
   </div>
