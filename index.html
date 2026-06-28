@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cogitare Strategists — Agentic AI Advisory</title>
+<meta name="description" content="Cogitare Strategists puts clear thinking at the front of every AI decision — so you can act with confidence. Agentic AI advisory for forward-looking businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d2244; --navy0:#0a1932; --navy2:#103057;
+  --gold:#c9a24b; --goldb:#e3c074; --goldt:#a87f2e;
+  --cream:#f6f4ef; --cream2:#f0ede6; --slate:#55617a; --ink:#aebdd6; --line:#e7e4db;
+  --serif:'Lora',Georgia,serif; --sans:'Poppins',system-ui,sans-serif;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--slate);background:var(--cream);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;}
+section{position:relative;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.kick{font-size:.72rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--goldt);font-weight:500;}
+h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:1.18;}
+.em{color:var(--goldt);font-style:italic;}
+.serif-i{font-family:var(--serif);font-style:italic;}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--sans);font-weight:500;font-size:.92rem;letter-spacing:.3px;
+  padding:.85em 1.5em;border-radius:40px;cursor:pointer;border:1px solid transparent;transition:.25s ease;}
+.btn-gold{background:var(--gold);color:#1c1405;}
+.btn-gold:hover{background:var(--goldb);transform:translateY(-2px);}
+.btn-ghost{border-color:rgba(201,162,75,.55);color:var(--goldb);}
+.btn-ghost:hover{background:rgba(201,162,75,.12);transform:translateY(-2px);}
+.btn-ghost.dark{color:var(--navy);border-color:rgba(13,34,68,.25);}
+.btn-ghost.dark:hover{background:rgba(13,34,68,.05);}
+
+/* mark */
+.mk{width:38px;height:38px;flex:0 0 auto;display:block;}
+.mk svg{width:100%;height:auto;}
+
+/* ===== NAV ===== */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s ease;}
+header.nav .bar{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.brand{display:flex;align-items:center;gap:11px;}
+.brand .nm{font-family:var(--serif);font-weight:600;font-size:1.18rem;color:#fff;transition:color .3s;}
+.brand .nm .dot{color:var(--gold);}
+.brand .nm .st{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--ink);display:block;margin-top:1px;}
+.navlinks{display:flex;align-items:center;gap:30px;}
+.navlinks a{font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);letter-spacing:.2px;transition:color .2s;position:relative;}
+.navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold);transition:width .25s;}
+.navlinks a:not(.btn):hover{color:#fff;}
+.navlinks a:not(.btn):hover::after{width:100%;}
+header.nav.scrolled{background:rgba(247,245,240,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);}
+header.nav.scrolled .brand .nm{color:var(--navy);}
+header.nav.scrolled .brand .nm .st{color:#8a93a6;}
+header.nav.scrolled .navlinks a{color:var(--slate);}
+header.nav.scrolled .navlinks a:hover{color:var(--navy);}
+header.nav.scrolled .navlinks .btn-ghost{color:var(--goldt);border-color:rgba(201,162,75,.5);}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.menu-btn span{width:24px;height:2px;background:#fff;transition:.3s;}
+header.nav.scrolled .menu-btn span{background:var(--navy);}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:radial-gradient(120% 90% at 50% 0%,rgba(28,58,104,.55) 0%,rgba(13,34,68,0) 55%),
+  radial-gradient(140% 120% at 50% 120%,rgba(201,162,75,.10) 0%,rgba(13,34,68,0) 50%),
+  linear-gradient(160deg,var(--navy) 0%,var(--navy0) 60%,#081429 100%);}
+.hero .net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9;}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:80px;}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--goldb);margin-bottom:26px;}
+.hero .eyebrow .ln{width:34px;height:1px;background:var(--gold);}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);color:#fff;font-weight:600;letter-spacing:-.5px;line-height:1.08;}
+.hero h1 .em{color:var(--goldb);}
+.hero .sub{max-width:620px;margin-top:28px;font-size:1.12rem;font-weight:300;color:#c4d0e4;line-height:1.7;}
+.hero .cta{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;}
+.hero .scroll-h{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;color:var(--ink);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.7;}
+.hero .scroll-h .dotline{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);}
+@keyframes pulse{0%,100%{opacity:.35;}50%{opacity:1;}}
+.net .pnode{animation:pulse 3.5s ease-in-out infinite;}
+
+/* section frame */
+.sec{padding:120px 0;}
+.sec.cream{background:linear-gradient(170deg,#f7f5f0,#efece4);}
+.sec.cream-alt{background:var(--cream);}
+.sec-head{max-width:760px;}
+.sec-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:14px;}
+.sec-head .lead{margin-top:18px;font-size:1.05rem;line-height:1.75;color:var(--slate);}
+.sec-head .lead b{color:var(--navy);font-weight:500;}
+
+/* PURPOSE */
+.purpose-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start;margin-top:10px;}
+.purpose-statement{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.32;color:var(--navy);}
+.purpose-statement .em{color:var(--goldt);}
+.purpose-bar{width:64px;height:2px;background:var(--gold);margin-bottom:26px;}
+.purpose-body p{margin-bottom:18px;font-size:1rem;line-height:1.8;color:var(--slate);}
+.purpose-body p b{color:var(--navy);font-weight:500;}
+.etym{margin-top:26px;border-left:2px solid var(--gold);padding:4px 0 4px 22px;}
+.etym .w{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.25rem;color:var(--goldt);}
+.etym .w span{font-family:var(--sans);font-style:normal;font-weight:300;font-size:.72rem;letter-spacing:1px;color:#8a93a6;margin-left:10px;}
+.etym .d{margin-top:8px;font-size:.92rem;color:var(--slate);}
+
+/* SERVICES */
+.svc-note{display:inline-flex;align-items:flex-start;gap:14px;margin-top:30px;background:rgba(201,162,75,.09);border:1px solid rgba(201,162,75,.32);border-radius:12px;padding:16px 22px;max-width:680px;}
+.svc-note .txt{font-size:.92rem;line-height:1.6;color:#4a4332;}
+.svc-note .txt b{color:var(--navy);font-weight:600;}
+.svc-list{margin-top:48px;display:flex;flex-direction:column;gap:14px;}
+.svc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:box-shadow .25s,border-color .25s;}
+.svc:hover{box-shadow:0 14px 40px rgba(13,34,68,.08);border-color:rgba(201,162,75,.4);}
+.svc-head{display:flex;align-items:center;gap:22px;padding:24px 28px;cursor:pointer;}
+.svc-head .ph{font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--goldt);font-weight:600;flex:0 0 86px;}
+.svc-head .nm{font-family:var(--serif);font-weight:600;font-size:1.22rem;color:var(--navy);flex:1;min-width:0;}
+.svc-head .one{color:var(--slate);font-size:.92rem;font-weight:300;flex:1.3;display:none;}
+.svc-head .dur{font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:var(--goldt);font-weight:500;border:1px solid rgba(201,162,75,.5);border-radius:30px;padding:5px 14px;white-space:nowrap;}
+.svc-head .tog{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--goldt);transition:.25s;}
+.svc.open .svc-head .tog{background:var(--navy);color:#fff;border-color:var(--navy);transform:rotate(45deg);}
+.svc-body{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.svc-body-inner{padding:0 28px 28px;border-top:1px solid var(--line);margin-top:0;}
+.svc-fields{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;padding-top:22px;}
+.fld .l{display:flex;align-items:center;gap:8px;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldt);font-weight:600;}
+.fld .l .d{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
+.fld .v{margin-top:8px;font-size:.94rem;line-height:1.6;color:var(--slate);}
+.fld .v b{color:var(--navy);font-weight:500;}
+.one-mob{display:none;}
+
+/* WHY (dark) */
+.why{color:#fff;background:radial-gradient(130% 90% at 85% 0%,rgba(28,58,104,.4),rgba(13,34,68,0) 55%),linear-gradient(160deg,var(--navy) 0%,var(--navy0) 70%,#081429 100%);overflow:hidden;}
+.why .net2{position:absolute;inset:0;width:100%;height:100%;opacity:.5;}
+.why .wrap{position:relative;z-index:2;}
+.why .sec-head h2{color:#fff;}
+.why .sec-head .kick{color:var(--goldb);}
+.why .sec-head .lead{color:var(--ink);}
+.why-grid{margin-top:54px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.diff{background:rgba(255,255,255,.035);border:1px solid rgba(201,162,75,.22);border-radius:16px;padding:30px 32px;transition:.25s;}
+.diff:hover{background:rgba(255,255,255,.06);border-color:rgba(201,162,75,.45);transform:translateY(-3px);}
+.diff .ic{width:34px;height:34px;color:var(--goldb);margin-bottom:18px;}
+.diff h3{color:#fff;font-size:1.18rem;}
+.diff p{margin-top:10px;font-size:.94rem;line-height:1.65;color:var(--ink);}
+.cap{margin-top:34px;background:rgba(255,255,255,.04);border:1px solid rgba(201,162,75,.3);border-radius:18px;padding:40px;}
+.cap .kick{color:var(--goldb);}
+.cap h3{color:#fff;font-size:1.5rem;margin-top:10px;}
+.cap p{margin-top:14px;font-size:1rem;line-height:1.75;color:var(--ink);max-width:760px;}
+.cap .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:11px;}
+.cap .tag{font-size:.78rem;letter-spacing:.5px;color:#e7eaf2;border:1px solid rgba(201,162,75,.5);border-radius:30px;padding:8px 18px;}
+
+/* WORKSHOP */
+.work-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center;margin-top:10px;}
+.work-card{background:linear-gradient(155deg,var(--navy),#0a1c3a);border-radius:22px;padding:46px;color:#fff;position:relative;overflow:hidden;}
+.work-card .badge{font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--goldb);}
+.work-card h3{color:#fff;font-size:1.7rem;margin-top:14px;line-height:1.25;}
+.work-card h3 .em{color:var(--goldb);}
+.work-card .wp{margin-top:18px;color:var(--ink);font-size:.98rem;line-height:1.7;}
+.work-card .wmark{position:absolute;right:-30px;bottom:-30px;width:180px;opacity:.12;}
+.work-list{list-style:none;}
+.work-list li{display:flex;gap:14px;margin-bottom:18px;font-size:1rem;line-height:1.55;color:var(--slate);}
+.work-list li b{color:var(--navy);font-weight:500;}
+.work-list .d{flex:0 0 auto;width:7px;height:7px;margin-top:8px;background:var(--gold);transform:rotate(45deg);}
+.work-meta{display:flex;gap:26px;margin:24px 0 30px;flex-wrap:wrap;}
+.work-meta .m .k{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldt);font-weight:600;}
+.work-meta .m .v{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1.05rem;margin-top:3px;}
+
+/* CONTACT (dark bookend) */
+.contact{color:#fff;overflow:hidden;
+  background:radial-gradient(120% 90% at 50% 0%,rgba(28,58,104,.5),rgba(13,34,68,0) 55%),
+  radial-gradient(140% 120% at 50% 120%,rgba(201,162,75,.10),rgba(13,34,68,0) 50%),
+  linear-gradient(160deg,var(--navy) 0%,var(--navy0) 60%,#081429 100%);}
+.contact .net3{position:absolute;inset:0;width:100%;height:100%;opacity:.5;}
+.contact .wrap{position:relative;z-index:2;text-align:center;}
+.contact .mk{width:58px;height:58px;margin:0 auto 22px;}
+.contact h2{color:#fff;font-size:clamp(2rem,4.4vw,3.1rem);}
+.contact h2 .em{color:var(--goldb);}
+.contact .csub{max-width:560px;margin:20px auto 0;color:var(--ink);font-size:1.05rem;line-height:1.7;}
+.contact-row{display:flex;justify-content:center;gap:14px;margin-top:36px;flex-wrap:wrap;}
+.cinfo{margin-top:46px;display:flex;justify-content:center;gap:50px;flex-wrap:wrap;}
+.cinfo a, .cinfo span{display:flex;align-items:center;gap:10px;color:#d8e0ee;font-size:.98rem;transition:color .2s;}
+.cinfo a:hover{color:var(--goldb);}
+.cinfo svg{width:17px;height:17px;color:var(--gold);}
+
+/* FOOTER */
+footer{background:#081429;color:var(--ink);padding:50px 0 34px;}
+footer .frow{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
+footer .fbrand{display:flex;align-items:center;gap:11px;}
+footer .fbrand .nm{font-family:var(--serif);font-weight:600;color:#fff;font-size:1.1rem;}
+footer .fbrand .nm .dot{color:var(--gold);}
+footer .ftag{font-family:var(--serif);font-style:italic;color:var(--goldb);font-size:1rem;}
+footer .fcopy{margin-top:26px;padding-top:22px;border-top:1px solid rgba(174,189,214,.15);font-size:.78rem;letter-spacing:.5px;color:#6f83a4;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* responsive */
+@media(max-width:900px){
+  .purpose-grid,.work-grid{grid-template-columns:1fr;gap:38px;}
+  .why-grid{grid-template-columns:1fr;}
+  .svc-fields{grid-template-columns:1fr;gap:18px;}
+  .navlinks{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);background:var(--navy);flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:40px;transform:translateX(100%);transition:transform .35s ease;box-shadow:-20px 0 60px rgba(0,0,0,.4);}
+  .navlinks.open{transform:translateX(0);}
+  .navlinks a{color:#fff !important;font-size:1.05rem;}
+  header.nav.scrolled .navlinks a{color:#fff !important;}
+  .menu-btn{display:flex;z-index:101;}
+  .work-card{padding:34px;}
+  .cap{padding:28px;}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px;}
+  .sec{padding:84px 0;}
+  .svc-head{flex-wrap:wrap;gap:10px 16px;padding:20px 22px;}
+  .svc-head .ph{flex-basis:auto;}
+  .svc-head .dur{order:3;}
+  .svc-body-inner{padding:0 22px 24px;}
+  .cinfo{gap:22px;}
+  .hero .cta .btn{width:100%;justify-content:center;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .net .pnode{animation:none;opacity:.8;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap bar">
+    <a href="#top" class="brand" aria-label="Cogitare Strategists home">
+      <span class="mk">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a24b" stroke-width="0.8" opacity="0.4"/>
+          <polygon points="50,18 77.7,34 77.7,66 50,82 22.3,66 22.3,34" fill="none" stroke="#c9a24b" stroke-width="0.8" opacity="0.4"/>
+          <g stroke="#c9a24b" stroke-width="1.1" opacity="0.85"><line x1="50" y1="50" x2="50" y2="18"/><line x1="50" y1="50" x2="77.7" y2="34"/><line x1="50" y1="50" x2="77.7" y2="66"/><line x1="50" y1="50" x2="50" y2="82"/><line x1="50" y1="50" x2="22.3" y2="66"/><line x1="50" y1="50" x2="22.3" y2="34"/></g>
+          <g fill="#e3c074"><circle cx="50" cy="18" r="3.5"/><circle cx="77.7" cy="34" r="3.5"/><circle cx="77.7" cy="66" r="3.5"/><circle cx="50" cy="82" r="3.5"/><circle cx="22.3" cy="66" r="3.5"/><circle cx="22.3" cy="34" r="3.5"/></g>
+          <circle cx="50" cy="50" r="8.2" fill="none" stroke="#e3c074" stroke-width="1.7"/><circle cx="50" cy="50" r="3.6" fill="#e3c074"/>
+        </svg>
+      </span>
+      <span class="nm">Cogitare<span class="dot">.</span><span class="st">Strategists</span></span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#purpose">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Cogitare</a>
+      <a href="#workshop">Workshops</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="net" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="rgba(201,162,75,0.16)" stroke-width="1" fill="none">
+      <line x1="180" y1="160" x2="380" y2="120"/><line x1="380" y1="120" x2="600" y2="220"/><line x1="600" y1="220" x2="880" y2="150"/><line x1="880" y1="150" x2="1140" y2="250"/><line x1="1140" y1="250" x2="1320" y2="160"/>
+      <line x1="180" y1="160" x2="260" y2="360"/><line x1="600" y1="220" x2="540" y2="430"/><line x1="880" y1="150" x2="980" y2="380"/><line x1="260" y1="360" x2="540" y2="430"/><line x1="540" y1="430" x2="980" y2="380"/>
+      <line x1="160" y1="720" x2="360" y2="800"/><line x1="360" y1="800" x2="680" y2="740"/><line x1="980" y1="380" x2="1180" y2="560"/><line x1="1180" y1="560" x2="1300" y2="720"/>
+    </g>
+    <g fill="rgba(174,189,214,0.28)">
+      <circle cx="380" cy="120" r="3"/><circle cx="880" cy="150" r="3"/><circle cx="1140" cy="250" r="2.5"/><circle cx="1320" cy="160" r="2.5"/><circle cx="260" cy="360" r="2.5"/><circle cx="980" cy="380" r="3"/><circle cx="160" cy="720" r="2.5"/><circle cx="360" cy="800" r="3"/><circle cx="1180" cy="560" r="2.5"/><circle cx="1300" cy="720" r="2.5"/>
+    </g>
+    <g fill="#c9a24b">
+      <circle class="pnode" cx="600" cy="220" r="4.5"/><circle class="pnode" cx="540" cy="430" r="4" style="animation-delay:1s"/><circle class="pnode" cx="180" cy="160" r="4" style="animation-delay:.5s"/><circle class="pnode" cx="680" cy="740" r="4" style="animation-delay:1.6s"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="eyebrow"><span class="ln"></span><span class="kick" style="color:var(--goldb)">Agentic AI Advisory</span></div>
+    <h1>AI decisions,<br><span class="em">thought through.</span></h1>
+    <p class="sub">We put clear thinking at the front of every AI decision — finding the opportunities that matter, proving them before you commit, and building only what earns its place. So you can act with confidence.</p>
+    <div class="cta">
+      <a href="#contact" class="btn btn-gold">Start a conversation →</a>
+      <a href="#services" class="btn btn-ghost">Explore our services</a>
+    </div>
+  </div>
+  <div class="scroll-h"><span>Scroll</span><span class="dotline"></span></div>
+</section>
+
+<!-- PURPOSE -->
+<section class="sec cream" id="purpose">
+  <div class="wrap">
+    <div class="purpose-grid">
+      <div class="reveal">
+        <div class="kick">Our Purpose</div>
+        <div class="purpose-bar" style="margin-top:18px"></div>
+        <div class="purpose-statement">To put <span class="em">clear thinking</span> at the front of every AI decision — so you can act with confidence.</div>
+      </div>
+      <div class="purpose-body reveal">
+        <p>In the rush to adopt AI, the rarest advantage isn't technology — it's <b>thought</b>. Everyone has the same models, the same tools, the same vendors. What separates the businesses that win with AI from those that merely spend on it is judgment.</p>
+        <p><b>Cogitare Strategists is an advisory-first, vendor-neutral partner for agentic AI.</b> We bring that judgment to the front of the work — finding the opportunities that matter, pressure-testing them before you commit, and helping you move from idea to working systems.</p>
+        <p>Our name is Latin for "to think." That is deliberate: the best AI outcomes begin not with code, but with clear thinking about the problem worth solving — and we do that thinking alongside you.</p>
+        <div class="etym">
+          <div class="w">cogitare <span>v., Latin</span></div>
+          <div class="d">to think; to consider; to turn over carefully in the mind.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec cream-alt" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">How We Help</div>
+      <h2>Six services. One connected path — <span class="em">enter wherever you are.</span></h2>
+      <p class="lead">Our work spans the full arc of AI adoption, from spotting the first opportunity to building and embedding live systems. Each service stands on its own — take one or several, in whatever order fits where you are today.</p>
+      <div class="svc-note">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="1.6" style="flex:0 0 auto;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div class="txt"><b>No fixed sequence.</b> Many clients join partway — already holding a roadmap and ready to pilot, or already validated and ready to build. Start at the point that matches your moment.</div>
+      </div>
+    </div>
+
+    <div class="svc-list reveal" id="svcList">
+      <!-- services injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <svg class="net2" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="rgba(201,162,75,0.12)" stroke-width="1" fill="none">
+      <line x1="1100" y1="120" x2="1280" y2="220"/><line x1="1280" y1="220" x2="1200" y2="420"/><line x1="1100" y1="120" x2="1200" y2="420"/>
+      <line x1="120" y1="640" x2="300" y2="740"/><line x1="300" y1="740" x2="220" y2="860"/>
+    </g>
+    <g fill="rgba(174,189,214,0.2)"><circle cx="1100" cy="120" r="3"/><circle cx="1280" cy="220" r="3"/><circle cx="120" cy="640" r="2.5"/><circle cx="300" cy="740" r="3"/></g>
+    <g fill="#c9a24b"><circle cx="1200" cy="420" r="4"/><circle cx="220" cy="860" r="3.5"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Why Cogitare</div>
+      <h2>A partner built around <span class="em">your interests</span> — not a sale.</h2>
+      <p class="lead">Choosing who guides your AI is a decision in itself. Here is what you can count on from us.</p>
+    </div>
+    <div class="why-grid">
+      <div class="diff reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+        <h3>Advisory-first, vendor-neutral</h3>
+        <p>We recommend what is right for you — not what we are selling. No platform allegiances, no build you do not need.</p>
+      </div>
+      <div class="diff reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        <h3>ROI before everything</h3>
+        <p>Every engagement is judged on real, measurable value — and we say so before you spend, not after.</p>
+      </div>
+      <div class="diff reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Privacy &amp; DPDP, built in</h3>
+        <p>Data protection and DPDP Act readiness are part of how we work from day one, not bolted on at the end.</p>
+      </div>
+      <div class="diff reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5l9 4-9 4-9-4z"/><path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/></svg>
+        <h3>Capability, not dependency</h3>
+        <p>We build your team's ability to lead and run AI — so you are stronger after we leave, not tied to us.</p>
+      </div>
+    </div>
+    <div class="cap reveal">
+      <div class="kick">The team behind the thinking</div>
+      <h3>Focused expertise, across the whole path.</h3>
+      <p>Cogitare Strategists is a focused team of consultants working at the front line of agentic AI. We pair strategic, advisory-led thinking with hands-on technical depth — spanning the full path from first opportunity to live, production systems.</p>
+      <div class="tags">
+        <span class="tag">Agentic AI strategy</span><span class="tag">AI readiness &amp; roadmapping</span><span class="tag">Pilot design &amp; evaluation</span><span class="tag">Custom agent systems</span><span class="tag">Enablement &amp; training</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP -->
+<section class="sec cream" id="workshop">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:46px">
+      <div class="kick">Featured Workshop</div>
+      <h2>Build the judgment, in-house.</h2>
+    </div>
+    <div class="work-grid">
+      <div class="work-card reveal">
+        <div class="badge">AI Agents · Build Your Mental Model</div>
+        <h3>Where do AI agents <span class="em">actually fit</span> in HR?</h3>
+        <p class="wp">A hands-on, half-day session in which your leaders take real people-processes and decide — rigorously and honestly — where an AI agent is worth building, where a simpler workflow wins, and where a human must stay in the loop.</p>
+        <svg class="wmark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="#e3c074" stroke-width="1.1"><line x1="50" y1="50" x2="50" y2="18"/><line x1="50" y1="50" x2="77.7" y2="34"/><line x1="50" y1="50" x2="77.7" y2="66"/><line x1="50" y1="50" x2="50" y2="82"/><line x1="50" y1="50" x2="22.3" y2="66"/><line x1="50" y1="50" x2="22.3" y2="34"/></g><g fill="#e3c074"><circle cx="50" cy="18" r="3.5"/><circle cx="77.7" cy="34" r="3.5"/><circle cx="77.7" cy="66" r="3.5"/><circle cx="50" cy="82" r="3.5"/><circle cx="22.3" cy="66" r="3.5"/><circle cx="22.3" cy="34" r="3.5"/><circle cx="50" cy="50" r="4"/></g></svg>
+      </div>
+      <div class="reveal">
+        <ul class="work-list">
+          <li><span class="d"></span><span>A completed <b>Agent Design Blueprint</b> for a real process — every step judged workflow, agent, or human.</span></li>
+          <li><span class="d"></span><span>A clear, defensible <b>build / don't-build decision</b> — and where exactly an agent belongs, if it does.</span></li>
+          <li><span class="d"></span><span>A "verify before you build" checklist that sets up the engineering stage honestly.</span></li>
+        </ul>
+        <div class="work-meta">
+          <div class="m"><div class="k">Format</div><div class="v">Half-day, in person</div></div>
+          <div class="m"><div class="k">For</div><div class="v">Leadership &amp; teams</div></div>
+          <div class="m"><div class="k">Prep</div><div class="v">None required</div></div>
+        </div>
+        <a href="#contact" class="btn btn-ghost dark">Scope a workshop →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <svg class="net3" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="rgba(201,162,75,0.13)" stroke-width="1" fill="none"><line x1="200" y1="120" x2="420" y2="90"/><line x1="420" y1="90" x2="640" y2="180"/><line x1="1000" y1="120" x2="1240" y2="220"/></g>
+    <g fill="rgba(174,189,214,0.2)"><circle cx="200" cy="120" r="3"/><circle cx="420" cy="90" r="3"/><circle cx="1240" cy="220" r="2.5"/></g>
+    <g fill="#c9a24b"><circle cx="640" cy="180" r="4"/><circle cx="1000" cy="120" r="3.5"/></g>
+  </svg>
+  <div class="wrap">
+    <span class="mk">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a24b" stroke-width="0.8" opacity="0.4"/>
+        <polygon points="50,18 77.7,34 77.7,66 50,82 22.3,66 22.3,34" fill="none" stroke="#c9a24b" stroke-width="0.8" opacity="0.4"/>
+        <g stroke="#c9a24b" stroke-width="1.1" opacity="0.85"><line x1="50" y1="50" x2="50" y2="18"/><line x1="50" y1="50" x2="77.7" y2="34"/><line x1="50" y1="50" x2="77.7" y2="66"/><line x1="50" y1="50" x2="50" y2="82"/><line x1="50" y1="50" x2="22.3" y2="66"/><line x1="50" y1="50" x2="22.3" y2="34"/></g>
+        <g fill="#e3c074"><circle cx="50" cy="18" r="3.5"/><circle cx="77.7" cy="34" r="3.5"/><circle cx="77.7" cy="66" r="3.5"/><circle cx="50" cy="82" r="3.5"/><circle cx="22.3" cy="66" r="3.5"/><circle cx="22.3" cy="34" r="3.5"/></g>
+        <circle cx="50" cy="50" r="8.2" fill="none" stroke="#e3c074" stroke-width="1.7"/><circle cx="50" cy="50" r="3.6" fill="#e3c074"/>
+      </svg>
+    </span>
+    <h2>Make your next AI decision <span class="em">with confidence.</span></h2>
+    <p class="csub">Begin with a no-obligation discovery conversation. Tell us where you are — and we'll show you what's possible.</p>
+    <div class="contact-row">
+      <a href="mailto:admin@cogitarestrategists.com?subject=AI%20discovery%20conversation" class="btn btn-gold">Email us →</a>
+      <a href="tel:+919182626500" class="btn btn-ghost">Call +91 91826 26500</a>
+    </div>
+    <div class="cinfo">
+      <a href="mailto:admin@cogitarestrategists.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>admin@cogitarestrategists.com</a>
+      <a href="tel:+919182626500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>+91 91826 26500</a>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>India</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <div class="fbrand">
+        <span class="mk" style="width:32px;height:32px">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="#c9a24b" stroke-width="1.1" opacity="0.85"><line x1="50" y1="50" x2="50" y2="18"/><line x1="50" y1="50" x2="77.7" y2="34"/><line x1="50" y1="50" x2="77.7" y2="66"/><line x1="50" y1="50" x2="50" y2="82"/><line x1="50" y1="50" x2="22.3" y2="66"/><line x1="50" y1="50" x2="22.3" y2="34"/></g><g fill="#e3c074"><circle cx="50" cy="18" r="3.5"/><circle cx="77.7" cy="34" r="3.5"/><circle cx="77.7" cy="66" r="3.5"/><circle cx="50" cy="82" r="3.5"/><circle cx="22.3" cy="66" r="3.5"/><circle cx="22.3" cy="34" r="3.5"/><circle cx="50" cy="50" r="3.6"/></g></svg>
+        </span>
+        <span class="nm">Cogitare<span class="dot">.</span> Strategists</span>
+      </div>
+      <div class="ftag">AI decisions, thought through.</div>
+    </div>
+    <div class="fcopy">
+      <span>© 2026 Cogitare Strategists · Agentic AI Advisory</span>
+      <span>admin@cogitarestrategists.com · +91 91826 26500 · India</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// service data
+const SERVICES=[
+ {ph:"Discover",nm:"Identifying Agentic AI Opportunities",dur:"Typically 1–2 weeks",
+  what:"A structured discovery exercise that surfaces and prioritises the AI opportunities specific to your business and sector.",
+  value:"Clarity on where AI can create <b>real value</b> — ranked by ROI and feasibility — so effort goes only where it pays off.",
+  rec:"Leaders exploring AI but unsure where to start, or wanting to cut through the hype.",
+  recv:"A prioritised shortlist of opportunities with estimated impact, effort, and quick wins."},
+ {ph:"Assess",nm:"AI Implementation Readiness",dur:"Typically 2–3 weeks",
+  what:"An honest health-check of your data, technology, team skills, and processes against what AI actually requires.",
+  value:"Avoid costly false starts by knowing your gaps — and how to close them — upfront. Includes <b>DPDP Act</b> and data-privacy readiness.",
+  rec:"Organisations preparing to commit budget to AI and wanting to de-risk the decision.",
+  recv:"A readiness scorecard, gap analysis, and prioritised recommendations."},
+ {ph:"Plan",nm:"Future AI Roadmap",dur:"Typically 2–4 weeks",
+  what:"A practical, sequenced AI plan aligned to your business goals, budget, and priorities.",
+  value:"A <b>board-ready roadmap</b> of what to do now, next, and later — sequencing spend so you see returns before committing further.",
+  rec:"Decision-makers who need a defensible plan to align stakeholders and budgets.",
+  recv:"A phased roadmap with priorities, indicative costs and effort, and clear milestones."},
+ {ph:"Prove",nm:"Pilot Design, Implementation & Evaluation",dur:"Typically 4–8 weeks",
+  what:"A low-risk, time-boxed pilot built around success metrics agreed upfront.",
+  value:"Real evidence of value — or an honest \u201cnot yet\u201d — before any large investment, with an objective <b>go / no-go</b> recommendation.",
+  rec:"Teams wanting proof, not promises, before they scale.",
+  recv:"A working pilot, measured results against targets, and a scale-or-stop recommendation."},
+ {ph:"Build",nm:"Custom Tools, Workflows & Agent Systems",dur:"Scoped per project",
+  what:"Tailored AI tools, automated workflows, and agent systems, built and integrated into your existing setup.",
+  value:"Solutions that fit your processes and systems (ERP, CRM, internal tools), cut manual effort and cost, and scale as you grow — with the <b>IP and code owned by you</b>.",
+  rec:"Organisations ready to move from pilot to real, deployed systems.",
+  recv:"Built, integrated, production-ready solutions with documentation, security, and support."},
+ {ph:"Enable",nm:"Workshops for Decision-Makers & Developers",dur:"1–2 days per session",
+  what:"Tailored sessions — strategic and demystifying for leaders, hands-on and practical for technical teams.",
+  value:"Confident decision-making at the top and capable execution below, so you are <b>not dependent on outsiders</b> forever.",
+  rec:"Leadership teams and developer groups wanting to upskill on AI.",
+  recv:"Customised workshops, practical materials, and follow-up resources."}
+];
+const list=document.getElementById('svcList');
+SERVICES.forEach((s,i)=>{
+  const el=document.createElement('div');
+  el.className='svc';
+  el.innerHTML=`
+    <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+      <div class="ph">${s.ph}</div>
+      <div class="nm">${s.nm}</div>
+      <div class="one">${s.what}</div>
+      <div class="dur">${s.dur}</div>
+      <div class="tog"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    </div>
+    <div class="svc-body">
+      <div class="svc-body-inner">
+        <div class="svc-fields">
+          <div class="fld"><div class="l"><span class="d"></span>What it is</div><div class="v">${s.what}</div></div>
+          <div class="fld"><div class="l"><span class="d"></span>The value you get</div><div class="v">${s.value}</div></div>
+          <div class="fld"><div class="l"><span class="d"></span>Recommended for</div><div class="v">${s.rec}</div></div>
+          <div class="fld"><div class="l"><span class="d"></span>What you receive</div><div class="v">${s.recv}</div></div>
+        </div>
+      </div>
+    </div>`;
+  list.appendChild(el);
+  const head=el.querySelector('.svc-head');
+  const body=el.querySelector('.svc-body');
+  const toggle=()=>{
+    const open=el.classList.toggle('open');
+    head.setAttribute('aria-expanded',open);
+    body.style.maxHeight=open?body.scrollHeight+'px':null;
+  };
+  head.addEventListener('click',toggle);
+  head.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
+});
+
+// nav scroll state
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+// mobile menu
+const menuBtn=document.getElementById('menuBtn');
+const navlinks=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+// reveal on scroll
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
